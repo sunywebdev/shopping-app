@@ -6,13 +6,13 @@ const Header = () => {
         <div className="bg-dark bg-gradient pb-2">
             <ul className="nav justify-content-center pb-2 ">
                 <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">Active</a>
+                    <a className="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">Link</a>
+                    <a className="nav-link" href="/">Contact Us</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">Link</a>
+                    <a className="nav-link" href="/">FAQ</a>
                 </li>
             </ul>
             <form className="d-flex w-75 mx-auto">
