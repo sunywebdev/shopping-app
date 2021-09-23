@@ -12,19 +12,19 @@ const Products = (props) => {
                     </div>
                     <div className="col-md-8 text-start ">
                         <div className="card-body">
-                            <h5>{name}</h5>
+                            <h5 className="text-primary">{name}</h5>
                             <p>Seller : {seller}</p>
                             <div className='row'>
                                 <div className="col-md-6">
                                     <h3>${price}</h3>
-                                    <p>only {stock} left in stock - order soon</p>
+                                    <p><small>only {stock} left in stock - order soon</small></p>
                                     <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark">Add to cart</button>
                                 </div>
                                 <div className="features col-md-6">
-                                    <h3>Features</h3>
+                                    <h6 className='fw-bold'>Features</h6>
                                     {
                                         features.map(feature =>
-                                            <li>{feature.description} : {feature.value}</li>
+                                            <li><small>{feature.description} : {feature.value}</small></li>
                                         )
                                     }
                                 </div>

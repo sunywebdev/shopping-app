@@ -17,7 +17,7 @@ const Cart = (props) => {
     }
 
     return (
-        <div className='sticky-top'>
+        <div className='sticky-top pt-3'>
             <h3>Order Summary</h3>
             <h5> Items ordered: {cart.length}</h5>
             <table className="table text-start">
