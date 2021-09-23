@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className="bg-dark bg-gradient pb-2 sticky-top">
+        <div className="bg-dark bg-gradient pb-2">
             <ul className="nav justify-content-center pb-2 ">
                 <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/">Active</a>

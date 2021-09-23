@@ -19,6 +19,7 @@ const Home = () => {
         <div className="home row">
             <div className="products col-lg-9">
                 {products.map(product =>
+                    /*  console.log(product.key) */
                     <Products
                         key={product.key}
                         product={product}

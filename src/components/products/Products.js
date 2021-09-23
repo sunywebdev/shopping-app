@@ -24,9 +24,7 @@ const Products = (props) => {
                                     <h3>Features</h3>
                                     {
                                         features.map(feature =>
-                                            <ul>
-                                                <li>{feature.description} : {feature.value}</li>
-                                            </ul>
+                                            <li>{feature.description} : {feature.value}</li>
                                         )
                                     }
                                 </div>
