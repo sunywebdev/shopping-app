@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 
 const Cart = (props) => {
     const { cart } = props
@@ -17,7 +18,7 @@ const Cart = (props) => {
     }
 
     return (
-        <div className='sticky-top pt-3'>
+        <div className='cart sticky-top'>
             <h3>Order Summary</h3>
             <h5> Items ordered: {cart.length}</h5>
             <table className="table text-start">
@@ -44,7 +45,7 @@ const Cart = (props) => {
                     </tr>
                 </tbody>
             </table>
-            <button type="button" className="btn btn-warning py-0 px-5 border border-dark text-center">Review your order</button>
+            <button type="button" className="btn btn-warning py-0 px-5 border border-dark text-center"> <i class="fas fa-shopping-basket pe-2"></i> Review orders</button>
         </div>
     );
 };

@@ -28,7 +28,7 @@ const Home = () => {
     }
     return (
         <div>
-            <div className='bg-dark pb-3 mb-2'>
+            <div className='bg-dark py-3 mb-2 sticky-top'>
                 <form className="d-flex w-75 mx-auto">
                     <input onChange={search} className="form-control me-2" type="search" placeholder="Search Products......." aria-label="Search" />
                     <button type="button" class="btn btn-warning position-relative">

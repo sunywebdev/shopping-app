@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
               <div className='bg-dark bg-gradient' >
-                <ul className="nav justify-content-center pb-2 m-0">
+                <ul className="nav justify-content-center">
                     <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="/">Home</a>
                     </li>

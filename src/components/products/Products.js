@@ -19,7 +19,7 @@ const Products = (props) => {
                                 <div className="col-md-6">
                                     <h3>${price}</h3>
                                     <p><small>only {stock} left in stock - order soon</small></p>
-                                    <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark">Add to cart</button>
+                                    <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark"><i class="fas fa-cart-plus pe-2"></i>Add to cart</button>
                                 </div>
                                 <div className="features col-md-6">
                                     <Rating className='py-1 pe-1'
