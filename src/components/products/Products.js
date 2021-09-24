@@ -15,8 +15,8 @@ const Products = (props) => {
                         <div className="card-body">
                             <h5 className="text-primary">{name}</h5>
                             <p>Seller : {seller}</p>
-                            <div className='row'>
-                                <div className="col-md-6 order-2 py-sm-3">
+                            <div className='row gy-3'>
+                                <div className="col-md-6 order-2">
                                     <h3>${price}</h3>
                                     <Rating className='py-1 pe-1'
                                         emptySymbol="far fa-star text-warning "
