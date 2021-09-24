@@ -31,12 +31,19 @@ const Home = () => {
             <div className='bg-dark pb-3 mb-2'>
                 <form className="d-flex w-75 mx-auto">
                     <input onChange={search} className="form-control me-2" type="search" placeholder="Search Products......." aria-label="Search" />
+                    <button type="button" class="btn btn-warning position-relative">
+                        <i class="fas fa-shopping-cart text-dark"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {cart.length}
+                            <span class="visually-hidden">Added Iteams</span>
+                        </span>
+                    </button>
                 </form>
+
             </div>
             <div className="home row">
                 <div className="products col-lg-9">
                     {searchItems.map(product =>
-                        /*  console.log(product.key) */
                         <Products
                             key={product.key}
                             product={product}
