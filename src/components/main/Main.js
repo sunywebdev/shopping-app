@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
-import LocalStroage from '../localStroage/LocalStroage';
 import Products from '../products/Products';
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
     const getProduct = (product) => {
         const newCart = [...cart, product]
         setCart(newCart)
-        LocalStroage(product.key)
     }
     const [searchItems, setSearchItems] = useState([])
     const search = (event) => {
