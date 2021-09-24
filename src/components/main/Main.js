@@ -31,17 +31,26 @@ const Home = () => {
             <div className='bg-dark py-3 mb-2 sticky-top'>
                 <form className="d-flex w-75 mx-auto">
                     <input onChange={search} className="form-control me-2" type="search" placeholder="Search Products......." aria-label="Search" />
-                    <button type="button" class="btn btn-warning position-relative">
-                        <i class="fas fa-shopping-cart text-dark"></i>
+                    <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" type="button" class="btn btn-warning position-relative">
+                        <i class="fas fa-shopping-cart text-dark" ></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {cart.length}
                             <span class="visually-hidden">Added Iteams</span>
                         </span>
                     </button>
                 </form>
-
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <Cart
+                            cart={cart}
+                        ></Cart>
+                    </div>
+                </div>
             </div>
-            <div className="home row">
+            <div className="home row container mx-auto">
                 <div className="products col-lg-9">
                     {searchItems.map(product =>
                         <Products
@@ -51,7 +60,7 @@ const Home = () => {
                         ></Products>
                     )}
                 </div>
-                <div className="cart col-lg-3">
+                <div className="cart col-lg-3 d-md-none d-lg-block">
                     <Cart
                         cart={cart}
                     ></Cart>

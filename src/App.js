@@ -5,7 +5,7 @@ import Home from './components/main/Main';
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <Header></Header>
       <Home></Home>
     </div>
