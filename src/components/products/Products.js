@@ -16,18 +16,18 @@ const Products = (props) => {
                             <h5 className="text-primary">{name}</h5>
                             <p>Seller : {seller}</p>
                             <div className='row'>
-                                <div className="col-md-6">
+                                <div className="col-md-6 order-2">
                                     <h3>${price}</h3>
-                                    <p><small>only {stock} left in stock - order soon</small></p>
-                                    <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark"><i class="fas fa-cart-plus pe-2"></i>Add to cart</button>
-                                </div>
-                                <div className="features col-md-6">
                                     <Rating className='py-1 pe-1'
                                         emptySymbol="far fa-star text-warning "
                                         fullSymbol="fas fa-star text-warning"
                                         initialRating={star}
                                         readonly
                                     ></Rating>({starCount})
+                                    <p><small>only {stock} left in stock - order soon</small></p>
+                                    <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark"><i class="fas fa-cart-plus pe-2"></i>Add to cart</button>
+                                </div>
+                                <div className="features col-md-6 order-1">
                                     <h6 className='fw-bold'>Features</h6>
                                     {
                                         features.map(feature =>

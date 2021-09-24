@@ -50,7 +50,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="home row container mx-auto">
+            <div className="home row mx-md-5 mx-auto">
                 <div className="products col-lg-9">
                     {searchItems.map(product =>
                         <Products
