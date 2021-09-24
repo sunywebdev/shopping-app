@@ -1,8 +1,9 @@
 import React from 'react';
+import Rating from 'react-rating';
 import './Products.css'
 
 const Products = (props) => {
-    const { name, img, seller, price, stock, features } = props.product
+    const { name, img, seller, price, stock, features, star, starCount } = props.product
     return (
         <div className="card-group">
             <div className="card mb-3">
@@ -21,6 +22,12 @@ const Products = (props) => {
                                     <button onClick={() => props.getProduct(props.product)} type="button" className="btn btn-warning py-0 px-5 border border-dark">Add to cart</button>
                                 </div>
                                 <div className="features col-md-6">
+                                    <Rating className='py-1 pe-1'
+                                        emptySymbol="far fa-star text-warning "
+                                        fullSymbol="fas fa-star text-warning"
+                                        initialRating={star}
+                                        readonly
+                                    ></Rating>({starCount})
                                     <h6 className='fw-bold'>Features</h6>
                                     {
                                         features.map(feature =>
